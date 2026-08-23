@@ -3,7 +3,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "project_settings/wsgi.py",
+            "src": "index.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "15mb",
@@ -14,7 +14,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/project_settings/wsgi.py"
+            "destination": "/index.py"
         }
     ]
 }

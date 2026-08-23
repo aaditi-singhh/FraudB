@@ -1,18 +1,10 @@
 {
+    "name": "fraudb",
     "version": 2,
-    "builds": [
-        {
-            "src": "project_settings/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb"
-            }
-        }
-    ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/project_settings/wsgi.py"
+            "dest": "/api/index"
         }
     ]
 }

@@ -99,7 +99,7 @@ MONGO_COLLECTIONS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'sessions.db',
+        'NAME': '/tmp/sessions.db' if os.environ.get('VERCEL') else BASE_DIR / 'sessions.db',
     }
 }
 
@@ -242,7 +242,8 @@ LOGGING = {
 }
 
 # Create logs directory if it doesn't exist
-os.makedirs(BASE_DIR / "logs", exist_ok=True)
+if not os.environ.get("VERCEL"):
+    os.makedirs(BASE_DIR / "logs", exist_ok=True)
 
 # n8n webhooks
 N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL", "")

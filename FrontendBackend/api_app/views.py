@@ -8,7 +8,7 @@ from accounts.mongo_models import MongoConnection, MongoUser
 from bson import ObjectId
 from ml.models import predict_transaction, predict_transactions_batch, get_predictor_info, initialize_predictor, predictor
 from .notifications import send_to_n8n
-from api.rules import RuleEngine
+from api_app.rules import RuleEngine
 import hashlib
 import uuid
 import json

@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     "core",
     "accounts",
     # Use AppConfig so we can initialize Mongo indexes at startup
-    "api.apps.ApiConfig",
+    "api_app.apps.ApiConfig",
 ]
 
 MIDDLEWARE = [

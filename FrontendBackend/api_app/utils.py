@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import logging
 from django.conf import settings
-from api.models import Prediction  # Import the Prediction model
+from api_app.models import Prediction  # Import the Prediction model
 
 logger = logging.getLogger(__name__)
 

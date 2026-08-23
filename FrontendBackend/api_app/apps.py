@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 class ApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'api'
+    name = 'api_app'
 
     def ready(self):
         # Initialize MongoDB indexes on startup

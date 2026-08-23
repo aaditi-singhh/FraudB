@@ -40,7 +40,7 @@ urlpatterns = [
     # Main app URLs
     path('', include('core.urls')),
     path('accounts/', include('accounts.urls')),
-    path('api/', include('api.urls')),
+    path('api/', include('api_app.urls')),
 ]
 
 # Serve media files in development
